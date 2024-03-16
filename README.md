@@ -22,7 +22,7 @@ title = title("helloWorld") # Hello-World
 
 ## AI Based Conversion (Coming Soon)
 ```python
-from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
+from autoCase import camel, snake, kebab, title
 
 string = "helloworld"
 camel = camel(string,ai=True,outputs=3) # [helloWorld, hellOworld, hellOWorld]
@@ -36,18 +36,18 @@ lower = lower(string,ai=True,outputs=3) # [hello world, hell oworld, hell o worl
 
 ## Dictionary Based Conversion
 ```python
-from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
+from autoCase import camel, snake, kebab, title
 
 word_list = ["hello","world","hell"]
 
 string = "helloworld"
-camel = AutoCase(string,dictionary=word_list).camel(outputs=3) # [helloWorld, hellWorld, hellWorld]
-snake = AutoCase(string,dictionary=word_list).snake(outputs=3) # [hello_world, hell_world, hell_world]
-pascal = AutoCase(string,dictionary=word_list).pascal(outputs=3) # [HelloWorld, HellWorld, HellWorld]
-kebab = AutoCase(string,dictionary=word_list).kebab(outputs=3) # [hello-world, hell-world, hell-world]
-train = AutoCase(string,dictionary=word_list).train(outputs=3) # [Hello-World, Hell-World, Hell-World]
-upper = AutoCase(string,dictionary=word_list).upper(outputs=3) # [HELLO WORLD, HELL WORLD, HELL WORLD]
-lower = AutoCase(string,dictionary=word_list).lower(outputs=3) # [hello world, hell world, hell world]
+camel = camel(outputs=3) # [helloWorld, hellWorld, hellWorld]
+snake = snake(outputs=3) # [hello_world, hell_world, hell_world]
+pascal = pascal(outputs=3) # [HelloWorld, HellWorld, HellWorld]
+kebab = kebab(outputs=3) # [hello-world, hell-world, hell-world]
+train = train(outputs=3) # [Hello-World, Hell-World, Hell-World]
+upper = upper(outputs=3) # [HELLO WORLD, HELL WORLD, HELL WORLD]
+lower = lower(outputs=3) # [hello world, hell world, hell world]
 ```
 
 
