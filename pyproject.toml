@@ -3,9 +3,9 @@ requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [project]
-name =  "py-project-toml"
+name =  "AutoCase"
 authors = [
-    {name = "Daniel Ciborowski", email = "dciborow@microsoft.com"},
+    {name = "Mohit Burkule", email = "mohitburkule5@gmail.com", role = "Developer"},
 ]
 description = "Sample Python Project for creating a new Python Module"
 readme = "README.md"
@@ -23,9 +23,6 @@ requires-python = ">=3.8.1"
 dynamic = ["version"]
 
 [project.optional-dependencies]
-spark = [
-    "pyspark>=3.0.0"
-]
 test = [
     "bandit[toml]==1.7.5",
     "black==23.3.0",
@@ -47,12 +44,12 @@ test = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/microsoft/python-package-template/tree/main#readme"
-Source = "https://github.com/microsoft/python-package-template"
-Tracker = "https://github.com/microsoft/python-package-template/issues"
+Documentation = "https://github.com/MohitBurkule/AutoCase/tree/main#readme"
+Source = "https://github.com/MohitBurkule/AutoCase"
+Tracker = "https://github.com/MohitBurkule/AutoCase/issues"
 
 [tool.flit.module]
-name = "python_package"
+name = "AutoCase"
 
 [tool.bandit]
 exclude_dirs = ["build","dist","tests","scripts"]
