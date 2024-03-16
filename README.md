@@ -34,7 +34,7 @@ upper = upper(string,ai=True,outputs=3) # [HELLO WORLD, HELL OWORLD, HELL O WORL
 lower = lower(string,ai=True,outputs=3) # [hello world, hell oworld, hell o world]
 ```
 
-## Dictionary Based Conversion
+## Dictionary Based Conversion (Coming Soon)
 ```python
 from autoCase import camel, snake, kebab, title
 
