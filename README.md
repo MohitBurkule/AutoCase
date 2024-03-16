@@ -4,36 +4,34 @@ Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Up
 
 # Python Installation
 ```bash
-pip install autocase
+git clone https://github.com/MohitBurkule/AutoCase.git
+cd AutoCase
+pip install -e .
 ```
 
 # Usage
 ## Basic Usage
 ```python
-from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
+from autoCase import camel, snake, kebab, title
 
-string = "Hello World"
-camel = AutoCase(string).camel() # helloWorld
-snake = AutoCase(string).snake() # hello_world
-pascal = AutoCase(string).pascal() # HelloWorld
-kebab = AutoCase(string).kebab() # hello-world
-train = AutoCase(string).train() # Hello-World
-upper = AutoCase(string).upper() # HELLO WORLD
-lower = AutoCase(string).lower() # hello world
+camel = camel("hello-world") # helloWorld
+snake = snake("helloWorld") # hello_world
+kebab = kebab("helloWorld") # hello-world
+title = title("helloWorld") # Hello-World
 ```
 
-## AI Based Conversion
+## AI Based Conversion (Coming Soon)
 ```python
 from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
 
 string = "helloworld"
-camel = AutoCase(string).camel(ai=True,outputs=3) # [helloWorld, hellOworld, hellOWorld]
-snake = AutoCase(string).snake(ai=True,outputs=3) # [hello_world, hell_oworld, hell_o_world]
-pascal = AutoCase(string).pascal(ai=True,outputs=3) # [HelloWorld, HellOworld, HellOWorld]
-kebab = AutoCase(string).kebab(ai=True,outputs=3) # [hello-world, hell-oworld, hell-o-world]
-train = AutoCase(string).train(ai=True,outputs=3) # [Hello-World, Hell-Oworld, Hell-O-World]
-upper = AutoCase(string).upper(ai=True,outputs=3) # [HELLO WORLD, HELL OWORLD, HELL O WORLD]
-lower = AutoCase(string).lower(ai=True,outputs=3) # [hello world, hell oworld, hell o world]
+camel = camel(string,ai=True,outputs=3) # [helloWorld, hellOworld, hellOWorld]
+snake = snake(string,ai=True,outputs=3) # [hello_world, hell_oworld, hell_o_world]
+pascal = pascal(string,ai=True,outputs=3) # [HelloWorld, HellOworld, HellOWorld]
+kebab = kebab(string,ai=True,outputs=3) # [hello-world, hell-oworld, hell-o-world]
+train = train(string,ai=True,outputs=3) # [Hello-World, Hell-Oworld, Hell-O-World]
+upper = upper(string,ai=True,outputs=3) # [HELLO WORLD, HELL OWORLD, HELL O WORLD]
+lower = lower(string,ai=True,outputs=3) # [hello world, hell oworld, hell o world]
 ```
 
 ## Dictionary Based Conversion
