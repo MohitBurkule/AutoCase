@@ -20,7 +20,7 @@ from autoCase import camel, snake, kebab, title
 camel = camel("hello-world") # helloWorld
 snake = snake("helloWorld") # hello_world
 kebab = kebab("helloWorld") # hello-world
-title = title("helloWorld") # Hello-World
+##title = title("helloWorld") # Hello World
 ```
 
 ## AI Based Conversion (Coming Soon)
