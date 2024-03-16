@@ -10,7 +10,7 @@ pip install autocase
 # Usage
 ## Basic Usage
 ```python
-from autocase import AutoCase
+from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
 
 string = "Hello World"
 camel = AutoCase(string).camel() # helloWorld
@@ -24,7 +24,7 @@ lower = AutoCase(string).lower() # hello world
 
 ## AI Based Conversion
 ```python
-from autocase import AutoCase
+from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
 
 string = "helloworld"
 camel = AutoCase(string).camel(ai=True,outputs=3) # [helloWorld, hellOworld, hellOWorld]
@@ -38,7 +38,7 @@ lower = AutoCase(string).lower(ai=True,outputs=3) # [hello world, hell oworld, h
 
 ## Dictionary Based Conversion
 ```python
-from autocase import AutoCase
+from autoCase.case.caseConverter import camelCase,snakeCase,kebabCase,titleCase
 
 word_list = ["hello","world","hell"]
 

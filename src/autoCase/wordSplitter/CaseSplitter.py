@@ -42,6 +42,27 @@ def TitleSplitter(word: str) -> list:
     """
     return word.split(' ')
 
+def MixedSplitter(word:str)->list:
+    """
+    This function is used to split mixed cases into list of words
+
+    :param word:
+    :return:
+    """
+    words = [word]
+    splitters = [CamelSplitter, SnakeSplitter, KebabSplitter, TitleSplitter]
+    for splitter in splitters:
+        temp = []
+        for word in words:
+            temp += splitter(word)
+        words = temp
+    return words
+
+
 if __name__ == "__main__":
-    for test in camel_split_tests:
-        print(CamelSplitter(test[0]) == test[1])
+    test='game_engine_se rVer_servicesModuleBase'
+    test='gameEngineServerServicesModuleBase'
+    print(MixedSplitter(test))
+
+    # for test in camel_split_tests:
+    #     print(CamelSplitter(test[0]) == test[1])
