@@ -1,7 +1,7 @@
 """This is a sample python file for testing functions from the source code."""
 from __future__ import annotations
 
-from AutoCase.hello_world import hello_world
+from AutoCase.word_splitter.RegexSplitter import hello_world
 
 
 def hello_test():

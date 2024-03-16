@@ -1,3 +1,4 @@
+#TODO: this uses user supplied or custon=m regex to select word groups or math spaces
 """This is a Sample Python file."""
 
 

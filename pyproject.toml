@@ -5,7 +5,7 @@ build-backend = "flit.buildapi"
 [project]
 name =  "AutoCase"
 authors = [
-    {name = "Mohit Burkule", email = "mohitburkule5@gmail.com", role = "Developer"},
+    {name = "Mohit Burkule", email = "mohitburkule5@gmail.com"},
 ]
 description = "Sample Python Project for creating a new Python Module"
 readme = "README.md"
