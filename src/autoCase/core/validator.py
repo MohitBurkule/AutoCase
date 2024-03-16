@@ -1,11 +1,11 @@
 
 def validate_word(word):
-    pass
+    return True
 
 
 def validate_splitter(splitter):
-    pass
+    return True
 
 
 def validate_case(case):
-    pass
+    return True

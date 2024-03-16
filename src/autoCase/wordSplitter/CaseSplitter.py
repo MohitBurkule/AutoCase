@@ -1,3 +1,4 @@
+from .utils import remove_empty_items
 def CamelSplitter(word: str) -> list:
     """
     This function is used to split camel case words into a list of words.
@@ -16,7 +17,7 @@ def CamelSplitter(word: str) -> list:
         else:
             temp += word[i]
     words.append(temp)
-    return words
+    return remove_empty_items(words)
 
 def SnakeSplitter(word: str) -> list:
     """
@@ -24,7 +25,9 @@ def SnakeSplitter(word: str) -> list:
 
     :return:
     """
-    return word.split('_')
+    words=word.split('_')
+    return remove_empty_items(words)
+
 
 def KebabSplitter(word: str) -> list:
     """
@@ -32,7 +35,8 @@ def KebabSplitter(word: str) -> list:
 
     :return:
     """
-    return word.split('-')
+    words=word.split('-')
+    return remove_empty_items(words)
 
 def TitleSplitter(word: str) -> list:
     """
@@ -40,7 +44,8 @@ def TitleSplitter(word: str) -> list:
 
     :return:
     """
-    return word.split(' ')
+    words=word.split(' ')
+    return remove_empty_items(words)
 
 def MixedSplitter(word:str)->list:
     """
@@ -56,7 +61,7 @@ def MixedSplitter(word:str)->list:
         for word in words:
             temp += splitter(word)
         words = temp
-    return words
+    return remove_empty_items(words)
 
 
 if __name__ == "__main__":
