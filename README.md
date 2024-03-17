@@ -1,4 +1,4 @@
-# AutoCase (WIP:Expect Major Changes)
+# autoCase (WIP:Expect Major Changes)
 
 Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion
 
