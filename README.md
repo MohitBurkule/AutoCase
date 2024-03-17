@@ -53,6 +53,16 @@ upper = upper(outputs=3) # [HELLO WORLD, HELL WORLD, HELL WORLD]
 lower = lower(outputs=3) # [hello world, hell world, hell world]
 ```
 
+### Development and Pypi
+```bash
+pip install -e .[build,test] 
+pytest
+pip-compile pyproject.toml
+python -m build 
+twine check dist/*
+twine upload -r pypi dist/* --verbose
+```
+
 
 
 
