@@ -70,7 +70,7 @@ def MixedSplitter(word: str) -> list:
 
 
 if __name__ == "__main__":
-    #test = "game_engine_se rVer_servicesModuleBase"
+    # test = "game_engine_se rVer_servicesModuleBase"
     test = "gameEngineServerServicesModuleBase"
     print(MixedSplitter(test))
 

@@ -2,13 +2,14 @@ from __future__ import annotations
 
 from autoCase import camel, snake, kebab, title
 from autoCase.wordSplitter import SnakeSplitter
+
 camel_test = [
     ("game_engine_server_services_module_base", "gameEngineServerServicesModuleBase"),
     ("game_engIne_server_services_module_base", "gameEngIneServerServicesModuleBase"),
     ("game_engIne_ser-ver_services_module_base", "gameEngIneSerVerServicesModuleBase"),
     ("hiThere", "hiThere"),
     ("hey There", "heyThere"),
-("hey there", "heyThere"),
+    ("hey there", "heyThere"),
     ("hey;There", "heyThere"),
     ("hi123", "hi123"),
     ("hi_123", "hi123"),
@@ -26,7 +27,7 @@ camel_test = [
 camel_from_snake = [
     ("game_engine_server_services_module_base", "gameEngineServerServicesModuleBase"),
     ("game_engIne_server_services_module_base", "gameEngIneServerServicesModuleBase"),
-("game_engIne_ser-ver_services_module_base", "gameEng-IneSer-verServicesModuleBase"),
+    ("game_engIne_ser-ver_services_module_base", "gameEng-IneSer-verServicesModuleBase"),
     ("hi_there", "HiThere"),
     ("hey_there", "HeyThere"),
     ("hi123", "Hi123"),
@@ -43,6 +44,7 @@ camel_from_snake = [
     ("_hi_123_tHerRe_123_", "Hi123THerRe123"),
 ]
 
+
 def test_camel():
     """
     This defines the expected usage, which can then be used in various test cases.
@@ -51,8 +53,12 @@ def test_camel():
     for test in camel_test:
         assert camel(test[0]) == test[1]
 
+
 def test_camel_from_snake():
     for test in camel_from_snake:
-        assert camel(test[0], splitter=SnakeSplitter) == test[1],f"Failed for {test[0]}, expected {test[1]} but got {camel(test[0], splitter=SnakeSplitter)}"
+        assert (
+            camel(test[0], splitter=SnakeSplitter) == test[1]
+        ), f"Failed for {test[0]}, expected {test[1]} but got {camel(test[0], splitter=SnakeSplitter)}"
+
 
 test_camel_from_snake()

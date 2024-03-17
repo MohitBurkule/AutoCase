@@ -27,7 +27,7 @@ def wordList2Kebab(words: list[str]) -> str:
 
     :return:
     """
-    #words = [word.lower() for word in words]
+    # words = [word.lower() for word in words]
     return "-".join(words)
 
 
@@ -37,7 +37,7 @@ def wordList2Snake(words: list[str]) -> str:
 
     :return:
     """
-    #words = [word.lower() for word in words]
+    # words = [word.lower() for word in words]
     return "_".join(words)
 
 
@@ -47,5 +47,5 @@ def wordList2Title(words: list[str]) -> str:
 
     :return:
     """
-    #words = [word.lower() for word in words]
+    # words = [word.lower() for word in words]
     return " ".join(words)
