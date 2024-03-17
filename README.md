@@ -2,13 +2,16 @@
 
 Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion
 
-# Python Installation
+# Latest Python Installation
 ```bash
 git clone https://github.com/MohitBurkule/AutoCase.git
 cd AutoCase
 pip install -e .
 ```
-
+# Pypi ( slightly older version)
+```
+pip install AutoCase
+```
 # Usage
 ## Basic Usage
 ```python
@@ -17,7 +20,7 @@ from autoCase import camel, snake, kebab, title
 camel = camel("hello-world") # helloWorld
 snake = snake("helloWorld") # hello_world
 kebab = kebab("helloWorld") # hello-world
-title = title("helloWorld") # Hello-World
+##title = title("helloWorld") # Hello World
 ```
 
 ## AI Based Conversion (Coming Soon)
