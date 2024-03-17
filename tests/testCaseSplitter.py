@@ -103,5 +103,17 @@ class TestCaseSplitter(unittest.TestCase):
         from autoCase.wordSplitter.CaseSplitter import TitleSplitter
         for test in title_split_tests:
             self.assertEqual(TitleSplitter(test[0]), test[1])
+
+    def testmixed(self):
+        from autoCase.wordSplitter.CaseSplitter import MixedSplitter
+        for test in title_split_tests:
+            self.assertEqual(MixedSplitter(test[0]), test[1])
+        for test in kebab_split_tests:
+            self.assertEqual(MixedSplitter(test[0]), test[1])
+        for test in snake_split_tests:
+            self.assertEqual(MixedSplitter(test[0]), test[1])
+        for test in camel_split_tests:
+            self.assertEqual(MixedSplitter(test[0]), test[1])
+
 if __name__ == '__main__':
     unittest.main()
