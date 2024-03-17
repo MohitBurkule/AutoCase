@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AutoCase.iml" filepath="$PROJECT_DIR$/.idea/AutoCase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/autoCase.iml" filepath="$PROJECT_DIR$/.idea/autoCase.iml" />
     </modules>
   </component>
 </project>

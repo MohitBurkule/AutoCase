@@ -3,7 +3,7 @@ requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [project]
-name =  "AutoCase"
+name =  "autoCase"
 authors = [
     {name = "Mohit Burkule", email = "mohitburkule5@gmail.com"},
 ]
@@ -47,12 +47,12 @@ build = [
     "twine"
 ]
 [project.urls]
-Documentation = "https://github.com/MohitBurkule/AutoCase/tree/main#readme"
-Source = "https://github.com/MohitBurkule/AutoCase"
-Tracker = "https://github.com/MohitBurkule/AutoCase/issues"
+Documentation = "https://github.com/MohitBurkule/autoCase/tree/main#readme"
+Source = "https://github.com/MohitBurkule/autoCase"
+Tracker = "https://github.com/MohitBurkule/autoCase/issues"
 
 [tool.flit.module]
-name = "AutoCase"
+name = "autoCase"
 
 [tool.bandit]
 exclude_dirs = ["build","dist","tests","scripts"]

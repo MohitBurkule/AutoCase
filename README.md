@@ -1,16 +1,16 @@
-# AutoCase (WIP:Expect Major Changes)
+# autoCase (WIP:Expect Major Changes)
 
 Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion
 
 # Latest Python Installation
 ```bash
-git clone https://github.com/MohitBurkule/AutoCase.git
-cd AutoCase
+git clone https://github.com/MohitBurkule/autoCase.git
+cd autoCase
 pip install -e .
 ```
 # Pypi ( slightly older version)
 ```
-pip install AutoCase
+pip install autoCase
 ```
 # Usage
 ## Basic Usage
