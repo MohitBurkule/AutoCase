@@ -2,4 +2,12 @@ from autoCase.wordSplitter.CaseSplitter import CamelSplitter, SnakeSplitter, Keb
 from autoCase.wordSplitter.RegexSplitter import RegexSplitter
 from autoCase.wordSplitter.DictSplitter import DictSplitter
 
-__all__ = ["CamelSplitter", "SnakeSplitter", "KebabSplitter", "TitleSplitter", "MixedSplitter", "RegexSplitter", "DictSplitter"]
+__all__ = [
+    "CamelSplitter",
+    "SnakeSplitter",
+    "KebabSplitter",
+    "TitleSplitter",
+    "MixedSplitter",
+    "RegexSplitter",
+    "DictSplitter",
+]

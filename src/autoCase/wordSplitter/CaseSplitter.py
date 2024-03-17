@@ -1,14 +1,16 @@
 from .utils import remove_empty_items
+
+
 def CamelSplitter(word: str) -> list:
     """
     This function is used to split camel case words into a list of words.
 
     :return:
     """
-    alphabets = 'abcdefghijklmnopqrstuvwxyz'.upper()
+    alphabets = "abcdefghijklmnopqrstuvwxyz".upper()
     word = list(word)
     words = []
-    temp = ''
+    temp = ""
     for i in range(len(word)):
         if word[i] in alphabets:
             if temp:
@@ -19,13 +21,14 @@ def CamelSplitter(word: str) -> list:
     words.append(temp)
     return remove_empty_items(words)
 
+
 def SnakeSplitter(word: str) -> list:
     """
     This function is used to split snake case words into a list of words.
 
     :return:
     """
-    words=word.split('_')
+    words = word.split("_")
     return remove_empty_items(words)
 
 
@@ -35,8 +38,9 @@ def KebabSplitter(word: str) -> list:
 
     :return:
     """
-    words=word.split('-')
+    words = word.split("-")
     return remove_empty_items(words)
+
 
 def TitleSplitter(word: str) -> list:
     """
@@ -44,10 +48,11 @@ def TitleSplitter(word: str) -> list:
 
     :return:
     """
-    words=word.split(' ')
+    words = word.split(" ")
     return remove_empty_items(words)
 
-def MixedSplitter(word:str)->list:
+
+def MixedSplitter(word: str) -> list:
     """
     This function is used to split mixed cases into list of words
 
@@ -65,8 +70,8 @@ def MixedSplitter(word:str)->list:
 
 
 if __name__ == "__main__":
-    test='game_engine_se rVer_servicesModuleBase'
-    test='gameEngineServerServicesModuleBase'
+    #test = "game_engine_se rVer_servicesModuleBase"
+    test = "gameEngineServerServicesModuleBase"
     print(MixedSplitter(test))
 
     # for test in camel_split_tests:

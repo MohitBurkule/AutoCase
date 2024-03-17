@@ -1,15 +1,15 @@
-
 def wordList2Camel(words: list[str]) -> str:
     """
     This function is used to convert a list of words into camel case.
 
     :return:
     """
-    if len(words)==0:
-        return ''
-    if len(words)==1:
+    if len(words) == 0:
+        return ""
+    if len(words) == 1:
         return words[0]
-    return words[0] + ''.join([word.capitalize() for word in words[1:]])
+    return words[0] + "".join([word.capitalize() for word in words[1:]])
+
 
 def wordList2Pascal(words: list[str]) -> str:
     """
@@ -17,8 +17,9 @@ def wordList2Pascal(words: list[str]) -> str:
 
     :return:
     """
-    words=wordList2Camel(words)
+    words = wordList2Camel(words)
     return words.capitalize()
+
 
 def wordList2Kebab(words: list[str]) -> str:
     """
@@ -27,7 +28,8 @@ def wordList2Kebab(words: list[str]) -> str:
     :return:
     """
     words = [word.lower() for word in words]
-    return '-'.join(words)
+    return "-".join(words)
+
 
 def wordList2Snake(words: list[str]) -> str:
     """
@@ -36,7 +38,8 @@ def wordList2Snake(words: list[str]) -> str:
     :return:
     """
     words = [word.lower() for word in words]
-    return '_'.join(words)
+    return "_".join(words)
+
 
 def wordList2Title(words: list[str]) -> str:
     """
@@ -45,4 +48,4 @@ def wordList2Title(words: list[str]) -> str:
     :return:
     """
     words = [word.lower() for word in words]
-    return ' '.join(words)
+    return " ".join(words)

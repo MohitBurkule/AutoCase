@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from autoCase import camel, snake, kebab, title
 
-camel_test=[
+camel_test = [
     ("game_engine_server_services_module_base", "gameEngineServerServicesModuleBase"),
     ("hiThere", "hiThere"),
     ("hi123", "hi123"),
@@ -34,7 +34,7 @@ def test_hello(unit_test_mocks: None):
     This is a simple test, which can use a mock to override online functionality.
     unit_test_mocks: Fixture located in conftest.py, implictly imported via pytest.
     """
-    pass#hello_test()
+    pass  # hello_test()
 
 
 def test_int_hello():
@@ -42,4 +42,4 @@ def test_int_hello():
     This test is marked implicitly as an integration test because the name contains "_init_"
     https://docs.pytest.org/en/6.2.x/example/markers.html#automatically-adding-markers-based-on-test-names
     """
-    pass#hello_test()
+    pass  # hello_test()

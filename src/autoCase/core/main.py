@@ -4,7 +4,8 @@ from autoCase.core.validator import *
 from functools import partial
 import logging
 
-def generic_converter(word: str, case: callable, splitter:callable=MixedSplitter) -> str:
+
+def generic_converter(word: str, case: callable, splitter: callable = MixedSplitter) -> str:
     """Converts a word to a specific case
 
     :param word: The word to be converted
@@ -36,7 +37,7 @@ snake = partial(generic_converter, case=wordList2Snake)
 kebab = partial(generic_converter, case=wordList2Kebab)
 title = partial(generic_converter, case=wordList2Title)
 
-camel_test=[
+camel_test = [
     ("game_engine_server_services_module_base", "gameEngineServerServicesModuleBase"),
     ("hiThere", "hiThere"),
     ("hi123", "hi123"),
@@ -54,7 +55,7 @@ camel_test=[
     ("game_engine_se rVer_servicesModuleBase", "gameEngineSeRVerServicesModuleBase"),
 ]
 
-camel_test2=[
+camel_test2 = [
     ("fallback_url", "fallbackUrl"),
     ("scrubber_media_url", "scrubberMediaUrl"),
     ("dash_url", "dashUrl"),
@@ -80,8 +81,8 @@ camel_test2=[
     (None, ""),
 ]
 
-if __name__=="__main__":
+if __name__ == "__main__":
     for test in camel_test2:
-        if not camel(test[0])==test[1]:
+        if not camel(test[0]) == test[1]:
             print(f"Failed for {test[0]}, expected {test[1]} but got {camel(test[0])}")
     print("All tests passed!")
