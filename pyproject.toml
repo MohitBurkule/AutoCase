@@ -7,7 +7,7 @@ name =  "AutoCase"
 authors = [
     {name = "Mohit Burkule", email = "mohitburkule5@gmail.com"},
 ]
-description = "Sample Python Project for creating a new Python Module"
+description = "Automatic AI based (optional) Camel / Snake / Pascal / Kebab / Train(Title) / Upper / Lower Case Conversion"
 readme = "README.md"
 classifiers = [
     "Development Status :: 3 - Alpha",
