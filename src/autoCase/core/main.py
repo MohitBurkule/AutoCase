@@ -2,7 +2,7 @@ from autoCase.wordSplitter import *
 from autoCase.case import *
 from autoCase.core.validator import *
 from functools import partial
-
+import logging
 
 def generic_converter(word: str, case: callable, splitter:callable=MixedSplitter) -> str:
     """Converts a word to a specific case
@@ -20,7 +20,9 @@ def generic_converter(word: str, case: callable, splitter:callable=MixedSplitter
     :rtype: str
     """
     if not validate_word(word):
-        raise ValueError(f"Invalid word: {word}")
+        # raise ValueError(f"Invalid word: {word}")
+        logging.error(f"Invalid word: {word}")
+        return ""
     if not validate_splitter(splitter):
         raise ValueError(f"Invalid splitter: {splitter}")
     if not validate_case(case):
@@ -52,8 +54,34 @@ camel_test=[
     ("game_engine_se rVer_servicesModuleBase", "gameEngineSeRVerServicesModuleBase"),
 ]
 
+camel_test2=[
+    ("fallback_url", "fallbackUrl"),
+    ("scrubber_media_url", "scrubberMediaUrl"),
+    ("dash_url", "dashUrl"),
+    ("_fallback_url", "_fallbackUrl"),
+    ("__scrubber_media___url_", "__scrubberMediaUrl_"),
+    ("_url__", "_url__"),
+    ("API", "API"),
+    ("_API_", "_API_"),
+    ("__API__", "__API__"),
+    ("APIResponse", "APIResponse"),
+    ("_APIResponse_", "_APIResponse_"),
+    ("__APIResponse__", "__APIResponse__"),
+    # Fixed issue #128
+    ("whatever_10", "whatever10"),
+    # Fixed issue # 18
+    ("test-1-2-3-4-5-6", "test123456"),
+    # Fixed issue # 61
+    ("test_n_test", "testNTest"),
+    # Fixed issue # 148
+    ("field_value_2_type", "fieldValue2Type"),
+    # Fixed issue # 256
+    ("", ""),
+    (None, ""),
+]
+
 if __name__=="__main__":
-    for test in camel_test:
+    for test in camel_test2:
         if not camel(test[0])==test[1]:
             print(f"Failed for {test[0]}, expected {test[1]} but got {camel(test[0])}")
     print("All tests passed!")

@@ -1,5 +1,7 @@
 
 def validate_word(word):
+    if type(word) != str:
+        return False
     return True
 
 

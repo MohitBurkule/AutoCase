@@ -5,7 +5,20 @@ def wordList2Camel(words: list[str]) -> str:
 
     :return:
     """
+    if len(words)==0:
+        return ''
+    if len(words)==1:
+        return words[0]
     return words[0] + ''.join([word.capitalize() for word in words[1:]])
+
+def wordList2Pascal(words: list[str]) -> str:
+    """
+    This function is used to convert a list of words into pascal case.
+
+    :return:
+    """
+    words=wordList2Camel(words)
+    return words.capitalize()
 
 def wordList2Kebab(words: list[str]) -> str:
     """
